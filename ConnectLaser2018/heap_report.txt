@@ -1,0 +1,17 @@
+/home/ipb/Desktop/LaserRanger2/laser 
+Heap dump by heaptrc unit
+99666 memory blocks allocated : 5449077/5861536
+99665 memory blocks freed     : 5449057/5861512
+1 unfreed memory blocks : 20
+True heap size : 884736
+True free heap : 883376
+Should be : 884648
+Call trace for block $B7C957E0 size 20
+  $08175813
+  $0816154B  TCANVAS__SETCLIPPING,  line 98 of ./include/canvas.inc
+  $0837C912  TCANVASDRAWER__CLIPPINGSTART,  line 121 of tadrawercanvas.pas
+  $082FD578  TCHART__DISPLAYSERIES,  line 698 of tagraph.pas
+  $082FDB5C  TCHART__DRAW,  line 769 of tagraph.pas
+  $082FFC40  TCHART__PAINT,  line 1141 of tagraph.pas
+  $081F8C78  TCUSTOMCONTROL__PAINTWINDOW,  line 132 of ./include/customcontrol.inc
+  $081E0F34  TWINCONTROL__PAINTHANDLER,  line 4768 of ./include/wincontrol.inc

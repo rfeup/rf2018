@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <MainUnit Value="0"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <VersionInfo>
+      <Language Value=""/>
+      <CharSet Value=""/>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+      <environment>
+        <UserOverrides Count="1">
+          <Variable0 Name="OPENSSL_armcap" Value="7"/>
+        </UserOverrides>
+      </environment>
+    </RunParams>
+    <RequiredPackages Count="7">
+      <Item1>
+        <PackageName Value="SdpoDynmatrix"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="SynEdit"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="lnetvisual"/>
+        <MinVersion Minor="6" Release="2" Valid="True"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="TAChartLazarusPkg"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="SdpoSerialLaz"/>
+        <MinVersion Minor="1" Release="2" Valid="True"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="LCL"/>
+      </Item7>
+    </RequiredPackages>
+    <Units Count="10">
+      <Unit0>
+        <Filename Value="laser.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos Y="28"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="lasers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FLasers"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="491"/>
+        <CursorPos X="26" Y="511"/>
+        <UsageCount Value="202"/>
+        <Bookmarks Count="6">
+          <Item0 X="63" Y="390"/>
+          <Item1 X="3" Y="42" ID="3"/>
+          <Item2 X="5" Y="253" ID="5"/>
+          <Item3 X="5" Y="1234" ID="1"/>
+          <Item4 X="9" Y="1150" ID="2"/>
+          <Item5 Y="1185" ID="9"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Utils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="24"/>
+        <CursorPos X="3" Y="32"/>
+        <UsageCount Value="201"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="genlist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="52"/>
+        <CursorPos X="77" Y="65"/>
+        <UsageCount Value="267"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="rlan.pas"/>
+        <UnitName Value="RLan"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="85"/>
+        <CursorPos X="3" Y="87"/>
+        <UsageCount Value="226"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="fitdata.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FitData"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="49"/>
+        <CursorPos X="32" Y="82"/>
+        <UsageCount Value="450"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../../../paulo/lazarus/sdpo/SdpoDynmatrix/dynmatrix.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="434"/>
+        <CursorPos Y="454"/>
+        <UsageCount Value="225"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../../paulo/lazarus/sdpo/SdpoDynmatrix/dynmatrixutils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="25"/>
+        <CursorPos X="29" Y="44"/>
+        <UsageCount Value="224"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/packages/fcl-image/src/fpcanvas.pp"/>
+        <UnitName Value="FPCanvas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="157"/>
+        <CursorPos X="14" Y="176"/>
+        <UsageCount Value="2284"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="paslmmin.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="180"/>
+        <CursorPos X="29" Y="201"/>
+        <UsageCount Value="2284"/>
+        <Loaded Value="True"/>
+      </Unit9>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="702" TopLine="699"/>
+      </Position1>
+      <Position2>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="939" TopLine="937"/>
+      </Position2>
+      <Position3>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="720" Column="66" TopLine="705"/>
+      </Position3>
+      <Position4>
+        <Filename Value="lasers.pas"/>
+      </Position4>
+      <Position5>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="167" Column="32" TopLine="135"/>
+      </Position5>
+      <Position6>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="219" Column="18" TopLine="187"/>
+      </Position6>
+      <Position7>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="353" TopLine="324"/>
+      </Position7>
+      <Position8>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="905" TopLine="872"/>
+      </Position8>
+      <Position9>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="404" Column="79" TopLine="367"/>
+      </Position9>
+      <Position10>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1143" Column="55" TopLine="1121"/>
+      </Position10>
+      <Position11>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1171" Column="3" TopLine="1158"/>
+      </Position11>
+      <Position12>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1330" Column="20" TopLine="1304"/>
+      </Position12>
+      <Position13>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1174" TopLine="1151"/>
+      </Position13>
+      <Position14>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1167" Column="8" TopLine="1151"/>
+      </Position14>
+      <Position15>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1171" Column="29" TopLine="1151"/>
+      </Position15>
+      <Position16>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="238" TopLine="232"/>
+      </Position16>
+      <Position17>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1142" Column="34" TopLine="1123"/>
+      </Position17>
+      <Position18>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="237" Column="29" TopLine="216"/>
+      </Position18>
+      <Position19>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1142" Column="80" TopLine="1123"/>
+      </Position19>
+      <Position20>
+        <Filename Value="laser.lpr"/>
+        <Caret Line="21" Column="3"/>
+      </Position20>
+      <Position21>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1219" Column="32" TopLine="1216"/>
+      </Position21>
+      <Position22>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1146" Column="16" TopLine="1122"/>
+      </Position22>
+      <Position23>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1081" Column="13" TopLine="1059"/>
+      </Position23>
+      <Position24>
+        <Filename Value="laser.lpr"/>
+        <Caret Line="28"/>
+      </Position24>
+      <Position25>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="27" Column="42"/>
+      </Position25>
+      <Position26>
+        <Filename Value="laser.lpr"/>
+        <Caret Line="28"/>
+      </Position26>
+      <Position27>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1221" Column="5" TopLine="1190"/>
+      </Position27>
+      <Position28>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1139" Column="9" TopLine="1122"/>
+      </Position28>
+      <Position29>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="1050" Column="9" TopLine="1050"/>
+      </Position29>
+      <Position30>
+        <Filename Value="lasers.pas"/>
+        <Caret Line="495" Column="49" TopLine="486"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="laser"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Optimizations>
+        <OptimizationLevel Value="2"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <UseExternalDbgSyms Value="True"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,164 @@
+unit FitData;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, dynmatrix, dynmatrixutils, paslmmin;
+
+function FitCircle(Points: TDMatrix): TDMatrix;
+function TestFitCircle(): TDMatrix;
+
+function FitCircleLMmin(Points: TDMatrix; radius: double; SL: TStrings): TDMatrix;
+
+implementation
+
+//uses lasers;
+
+procedure evaluate_nonlinXcYc(p: pdouble; m_dat: integer; data: pointer; f: pdouble; info: pinteger);
+var i: integer;
+    xc, yc, r: double;
+    pdata: pdouble;
+begin
+  pdata := data;
+  xc := p[0];
+  yc := p[1];
+  r := pdata[0];
+
+  for i := 0 to m_dat - 1 do begin
+    f[i] := sqr(pdata[1 + 2 * i] - xc) + sqr(pdata[1 + 2 * i + 1] - Yc) - sqr(r);
+  end;
+end;
+
+
+function FitCircleLMmin(Points: TDMatrix; radius: double; SL: TStrings): TDMatrix;
+var Np, Nv, i: integer;
+
+    p: array of double;
+
+    control: lm_control_struct;
+    status: lm_status_struct;
+
+    X0: TDMatrix;
+    data: array of double;
+
+begin
+  result := Mzeros(1, 5);
+  Np := Points.NumRows;
+  if Np < 3 then exit;
+  Nv := 2;
+
+    // auxiliary parameters
+  control := lm_control_double;
+  control.verbosity := 0;//31;
+  control.msgs := SL;
+  control.patience := 1000;
+
+  X0 := MColMean(Points);
+  SetLength(p, Nv);
+  p[0] := X0[0, 0];
+  p[1] := X0[0, 1];
+
+  SetLength(data, 2 * Np + 1);
+  data[0] := radius;
+  for i := 0 to Np - 1 do begin
+    data[1 + 2 * i] := Points[i, 0];
+    data[1 + 2 * i + 1] := Points[i, 1];
+  end;
+
+  lmmin(Nv, @p[0], Np, @data[0], @evaluate_nonlinXcYc, @control, @status);
+
+  {SL.Add(format('lmmin status after %d function evaluations:  %s',
+         [status.nfev, lm_infmsg[status.outcome]] ));
+  for i := 0 to Nv -1 do begin
+      SL.Add(format('  p[%d] = %19.11f', [i, p[i]]));
+  end;
+  SL.Add(format('  d = %19.11f', [status.fnorm]));}
+
+  result[0, 0] := p[0];
+  result[0, 1] := p[1];
+  result[0, 2] := radius;
+  result[0, 3] := status.fnorm;
+  result[0, 4] := Np;
+
+end;
+
+
+function FitCircle(Points: TDMatrix): TDMatrix;
+var Suv, Suu, Suuu, Svv, Svvv, Suvv, Svuu: double;
+    X0, U, V, UU, VV, UV: TDMatrix;
+    a, k1, k2, uc, vc, r, delta: double;
+    N: integer;
+    eu, ev: TDMatrix;
+begin
+  result := Mzeros(1, 5);
+  N := Points.NumRows;
+  if n <= 0 then exit;
+
+  X0 := MColMean(Points);
+  //MAddToStringListWL('X0', X0, FLasers.MemoFitData.Lines);
+  U := MOneCol(Points, 0) - X0[0, 0];
+  V := MOneCol(Points, 1) - X0[0, 1];
+  //MAddToStringListWL('U', U, FLasers.MemoFitData.Lines);
+  //MAddToStringListWL('V', V, FLasers.MemoFitData.Lines);
+
+  UU := MelementMult(U, U);
+  VV := MelementMult(V, V);
+  UV := MelementMult(U, V);
+
+  Suu := MColSum(UU)[0, 0];
+  Svv := MColSum(VV)[0, 0];
+
+  Suv := MColSum(UV)[0, 0];
+
+  Suuu := MColSum(MelementMult(UU, U))[0, 0];
+  Svvv := MColSum(MelementMult(VV, V))[0, 0];
+
+  Svuu := MColSum(MelementMult(UV, U))[0, 0];
+  Suvv := MColSum(MelementMult(UV, V))[0, 0];
+
+  delta := Suu * Svv - Suv * Suv;
+  if abs(delta) < 1e-10 then exit;
+
+  k1 := 0.5 * (Suuu + Suvv);
+  k2 := 0.5 * (Svvv + Svuu);
+
+  uc := (k1 * Svv - k2 * Suv) / delta;
+  vc := (k2 * Suu - k1 * Suv) / delta;
+
+  a := sqr(uc) + sqr(vc) + (Suu + Svv) / N;
+  if a < 0 then exit;
+
+  r := sqrt(a);
+
+  result[0, 0] := uc + X0[0, 0];
+  result[0, 1] := vc + X0[0, 1];
+  result[0, 2] := r;
+
+  eu := U - uc;
+  ev := V - vc;
+  result[0, 3] := MColSquareSum(MelementMult(eu, eu) + MelementMult(ev, ev) - sqr(r))[0, 0];
+  result[0, 4] := N;
+
+end;
+
+
+function TestFitCircle(): TDMatrix;
+var P: TDMatrix;
+begin
+  P := MFromArray(7, 2,
+                   [0.000, 0.000,
+                    0.500, 0.250,
+                    1.000, 1.000,
+                    1.500, 2.250,
+                    2.000, 4.000,
+                    2.500, 6.250,
+                    3.000, 9.000]);
+  //P.Load('fitData.txt');
+  result := FitCircle(P);
+
+end;
+
+end.
+

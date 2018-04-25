@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/home/pi/bin/fpc" Date="1485491536"/>
+  <Params Value=" -MObjFPC -Scghi -O2 -g -gl -Xg -l -vewnhibq -Fi/home/pi/Desktop/R@F_2018/ConnectLaser2018/lib/arm-linux -Fl/opt/gnome/lib -Fu/home/pi/dev/lazarus/1.6.2/components/tachart/lib/arm-linux/gtk2 -Fu/home/pi/lazcomponents/lnet/lazaruspackage/lib/arm-linux -Fu/home/pi/dev/lazarus/1.6.2/components/ideintf/units/arm-linux/gtk2 -Fu/home/pi/dev/lazarus/1.6.2/components/synedit/units/arm-linux/gtk2 -Fu/home/pi/.lazarus_1.6.2/lib/SdpoSerialLaz/lib/arm-linux -Fu/home/pi/dev/lazarus/1.6.2/components/lazcontrols/lib/arm-linux/gtk2 -Fu/home/pi/dev/lazarus/1.6.2/lcl/units/arm-linux/gtk2 -Fu/home/pi/dev/lazarus/1.6.2/lcl/units/arm-linux -Fu/home/pi/.lazarus_1.6.2/lib/SdpoDynmatrix/lib/arm-linux -Fu/home/pi/dev/lazarus/1.6.2/components/lazutils/lib/arm-linux -Fu/home/pi/dev/lazarus/1.6.2/packager/units/arm-linux -Fu/home/pi/Desktop/R@F_2018/ConnectLaser2018/ -FU/home/pi/Desktop/R@F_2018/ConnectLaser2018/lib/arm-linux/ -dUseCThreads -dLCL -dLCLgtk2 laser.lpr"/>
+</CONFIG>
