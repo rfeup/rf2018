@@ -431,7 +431,7 @@ begin
 
        atGoToXY: begin
 
-       writeln ('doMerda');
+       
        if FHal.CBDebug.checked then begin
                     FHal.EActionDebug.text := 'GoToXY';
                  end;
