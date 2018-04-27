@@ -280,9 +280,9 @@ begin
     if chr(NetGetByte(NetInBufOdo)) <> '3' then
        exit;
 
-    Wr.V3 := - NetGetShort(NetInBufOdo)/1000;
-    Wr.V1 := - NetGetShort(NetInBufOdo)/1000;
-    Wr.V2 := - NetGetShort(NetInBufOdo)/1000;
+    Wr.V3 :=  NetGetShort(NetInBufOdo)/1000;
+    Wr.V1 :=  NetGetShort(NetInBufOdo)/1000;
+    Wr.V2 :=  NetGetShort(NetInBufOdo)/1000;
 
     StartButton := (NetGetWord(NetInBufOdo) = 1);
 end;

@@ -1,8 +1,8 @@
 { This is an automatically generated lazarus resource file }
 
 LazarusResources.Add('TFLaserLoc','FORMDATA',[
-  'TPF0'#10'TFLaserLoc'#9'FLaserLoc'#4'Left'#3#158#1#6'Height'#3#240#1#3'Top'#3
-  +#134#0#5'Width'#3'['#2#7'Caption'#6#8'LaserLoc'#12'ClientHeight'#3#240#1#11
+  'TPF0'#10'TFLaserLoc'#9'FLaserLoc'#4'Left'#3'a'#1#6'Height'#3#240#1#3'Top'#3
+  +#141#0#5'Width'#3'['#2#7'Caption'#6#8'LaserLoc'#12'ClientHeight'#3#240#1#11
   +'ClientWidth'#3'['#2#7'OnClose'#7#9'FormClose'#8'OnCreate'#7#10'FormCreate'#9
   +'OnDestroy'#7#11'FormDestroy'#6'OnShow'#7#8'FormShow'#17'SessionProperties'
   +#12'I'#1#0#0'CBAccumulation.Checked;CBInvertedLaser.Checked;EditCerr.Text;Ed'
@@ -116,8 +116,8 @@ LazarusResources.Add('TFLaserLoc','FORMDATA',[
   +'t'#3#136#0#6'Height'#2#21#3'Top'#3#30#1#5'Width'#2#19#7'Caption'#6#2'Vn'#11
   +'ParentColor'#8#0#0#6'TLabel'#7'Label21'#4'Left'#3#24#1#6'Height'#2#21#3'Top'
   +#3#30#1#5'Width'#2#14#7'Caption'#6#1'W'#11'ParentColor'#8#0#0#0#0#9'TTabShee'
-  +'t'#9'TabRadial'#7'Caption'#6#6'Radial'#12'ClientHeight'#4#200'4'#1#0#11'Cli'
-  +'entWidth'#4#164'c'#1#0#0#9'TPaintBox'#8'PaintBox'#4'Left'#2#0#6'Height'#3
+  +'t'#9'TabRadial'#7'Caption'#6#6'Radial'#12'ClientHeight'#4#184'6'#1#0#11'Cli'
+  +'entWidth'#4#255'e'#1#0#0#9'TPaintBox'#8'PaintBox'#4'Left'#2#0#6'Height'#3
   +#168#1#3'Top'#2#26#5'Width'#3#248#1#0#0#9'TCheckBox'#10'CBShowSize'#4'Left'#2
   +#4#6'Height'#2#19#3'Top'#2#6#5'Width'#2'H'#7'Caption'#6#9'Show Size'#8'TabOr'
   +'der'#2#0#0#0#0#6'TLabel'#6'Label1'#4'Left'#2#8#6'Height'#2#21#3'Top'#2#8#5

@@ -1,7 +1,7 @@
 object FLaserLoc: TFLaserLoc
-  Left = 414
+  Left = 426
   Height = 496
-  Top = 134
+  Top = 98
   Width = 603
   Caption = 'LaserLoc'
   ClientHeight = 496
@@ -348,7 +348,7 @@ object FLaserLoc: TFLaserLoc
         AutoSize = False
         AutoSelect = False
         TabOrder = 0
-        Text = '0.0595'
+        Text = '0.029'
       end
       object Label14: TLabel
         Left = 0
@@ -366,7 +366,7 @@ object FLaserLoc: TFLaserLoc
         AutoSize = False
         AutoSelect = False
         TabOrder = 1
-        Text = '0.5175'
+        Text = '0.124'
       end
       object Label15: TLabel
         Left = 0
@@ -502,8 +502,8 @@ object FLaserLoc: TFLaserLoc
   end
   object TabRadial: TTabSheet
     Caption = 'Radial'
-    ClientHeight = 78552
-    ClientWidth = 90441
+    ClientHeight = 79544
+    ClientWidth = 91647
     object PaintBox: TPaintBox
       Left = 0
       Height = 424

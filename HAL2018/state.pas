@@ -78,15 +78,17 @@ var
       (x: targetX - warehouseSpace * 3; y: -warehouseHallwayY; teta: -90; advance: NormalAdvance; kind: bpkTarget),
       (x: targetX - warehouseSpace * 4; y: -warehouseHallwayY; teta: -90; advance: NormalAdvance; kind: bpkTarget),
 
-      (x: sourceX; y: 0.08; teta: 0; advance: NormalAdvanceX; kind: bpkMachine),
+      //Red Machines
+      (x: sourceX-0.1; y: 0.08; teta: 0; advance: NormalAdvanceX; kind: bpkMachine),
       (x: 0; y: 0.09; teta: 179; advance: 0; kind: bpkMachine),  // x,advance dinamically set in BuildStateMachine
-      (x: sourceX; y: -0.09; teta: 0; advance: NormalAdvanceX; kind: bpkMachine),
+      (x: sourceX-0.1; y: -0.09; teta: 0; advance: NormalAdvanceX; kind: bpkMachine),
       (x: 0; y: -0.09; teta: 179; advance: 0; kind: bpkMachine), // x,advance dinamically set in BuildStateMachine
 
+      //Green Machines
       (x: 0; y: 0.08; teta: 0; advance: 0; kind: bpkMachine),    // x,advance dinamically set in BuildStateMachine
-      (x: targetX; y: 0.09; teta: 179; advance: NormalAdvanceX; kind: bpkMachine),
+      (x: targetX + 0.5; y: 0.09; teta: 179; advance: NormalAdvanceX; kind: bpkMachine),
       (x: 0; y: -0.09; teta: 0; advance: 0; kind: bpkMachine),   // x,advance dinamically set in BuildStateMachine
-      (x: targetX; y: -0.09; teta: 179; advance: NormalAdvanceX; kind: bpkMachine),
+      (x: targetX + 0.5; y: -0.09; teta: 179; advance: NormalAdvanceX; kind: bpkMachine),
 
       // starting position
       (x: sourceX; y: -0.57; teta: 90; advance: NormalAdvance; kind: bpkStart)
@@ -929,10 +931,10 @@ begin
 
   advance := warehouseX - machine_approach_x;
 
-  BoxPlaces[11].x := -machine_approach_x;
-  BoxPlaces[13].x := -machine_approach_x;
-  BoxPlaces[14].x := machine_approach_x;
-  BoxPlaces[16].x := machine_approach_x;
+  BoxPlaces[11].x := -machine_approach_x - 0.02;
+  BoxPlaces[13].x := -machine_approach_x - 0.02;
+  BoxPlaces[14].x := machine_approach_x + 0.02;
+  BoxPlaces[16].x := machine_approach_x + 0.02;
 
   BoxPlaces[11].advance := advance;
   BoxPlaces[13].advance := advance;

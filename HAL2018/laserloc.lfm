@@ -1,7 +1,7 @@
 object FLaserLoc: TFLaserLoc
-  Left = 414
+  Left = 353
   Height = 496
-  Top = 134
+  Top = 141
   Width = 603
   Caption = 'LaserLoc'
   ClientHeight = 496
@@ -502,8 +502,8 @@ object FLaserLoc: TFLaserLoc
   end
   object TabRadial: TTabSheet
     Caption = 'Radial'
-    ClientHeight = 79048
-    ClientWidth = 91044
+    ClientHeight = 79544
+    ClientWidth = 91647
     object PaintBox: TPaintBox
       Left = 0
       Height = 424

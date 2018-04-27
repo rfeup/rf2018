@@ -30,7 +30,7 @@ const
 
   clawCenterDistance = 0.31;//0.3
 
-  warehouseHallwayY = 0.53;
+  warehouseHallwayY = 0.51;  //0.53
 
   warehouseLeaveSpeed = 0.2;//0.25
   defaultFinalSpeed = 0;
@@ -78,15 +78,17 @@ var
       (x: targetX - warehouseSpace * 3; y: -warehouseHallwayY; teta: -90; advance: NormalAdvance; kind: bpkTarget),
       (x: targetX - warehouseSpace * 4; y: -warehouseHallwayY; teta: -90; advance: NormalAdvance; kind: bpkTarget),
 
-      (x: sourceX; y: 0.08; teta: 0; advance: NormalAdvanceX; kind: bpkMachine),
+      //Red Machines
+      (x: sourceX-0.1; y: 0.08; teta: 0; advance: NormalAdvanceX; kind: bpkMachine),
       (x: 0; y: 0.09; teta: 179; advance: 0; kind: bpkMachine),  // x,advance dinamically set in BuildStateMachine
-      (x: sourceX; y: -0.09; teta: 0; advance: NormalAdvanceX; kind: bpkMachine),
+      (x: sourceX-0.1; y: -0.09; teta: 0; advance: NormalAdvanceX; kind: bpkMachine),
       (x: 0; y: -0.09; teta: 179; advance: 0; kind: bpkMachine), // x,advance dinamically set in BuildStateMachine
 
+      //Green Machines
       (x: 0; y: 0.08; teta: 0; advance: 0; kind: bpkMachine),    // x,advance dinamically set in BuildStateMachine
-      (x: targetX; y: 0.09; teta: 179; advance: NormalAdvanceX; kind: bpkMachine),
+      (x: targetX + 0.5; y: 0.09; teta: 179; advance: NormalAdvanceX; kind: bpkMachine),
       (x: 0; y: -0.09; teta: 0; advance: 0; kind: bpkMachine),   // x,advance dinamically set in BuildStateMachine
-      (x: targetX; y: -0.09; teta: 179; advance: NormalAdvanceX; kind: bpkMachine),
+      (x: targetX + 0.5; y: -0.09; teta: 179; advance: NormalAdvanceX; kind: bpkMachine),
 
       // starting position
       (x: sourceX; y: -0.57; teta: 90; advance: NormalAdvance; kind: bpkStart)
@@ -431,7 +433,7 @@ begin
 
        atGoToXY: begin
 
-       writeln ('doMerda');
+       
        if FHal.CBDebug.checked then begin
                     FHal.EActionDebug.text := 'GoToXY';
                  end;
